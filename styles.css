@@ -1,0 +1,209 @@
+body{
+    background-color: #181719;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    padding: 3vw 5vw;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+}
+.nav-home{
+    flex: 1 1 30%;
+}
+.nav-menu{
+    text-align: right;
+    flex: 1 1 70%;
+}
+.nav-home a, .icon{
+    display: inline;
+    padding: 10px;
+    font-family: Crimson Pro;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 2vh;
+    line-height: 16px;
+    color: #FFF;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    text-transform: uppercase;  
+    text-decoration: none;
+}
+.nav-menu a{
+    margin: 0 25px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2vh;
+    line-height: 22px;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;    
+    border-bottom: 2px solid transparent;
+    transition: border-color 1s ease;
+}
+.nav-menu a:hover{
+    transition: border-color 1s ease;
+    border-bottom: 2px solid #FFFFFF;
+}
+.icon{
+    display: none;
+}
+
+.container{
+    height: 70%;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.description{
+    padding: 15px;
+    width: 35vw;
+}
+h1{
+    font-family: Lora;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 5vh;
+    line-height: 61px;
+    color: #FFFFFF;
+}
+.description div *{
+    display: flex;
+    align-items: center;
+}
+span{
+    margin-left: 15px;
+}
+.description p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2vh;
+    line-height: 3vh;
+    color: #FFFFFF;
+}
+.description a{
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vh;
+    line-height: 2vh;
+
+    color: #FFFFFF;
+}
+.photo{
+    width: 45vw;
+    position: relative;
+}
+.card{
+    padding: 15px;
+    background-color: #181719;
+    z-index: 2;
+    width: 51%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 42%;
+    top: 85%;
+}
+.card div{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.card div *{
+    margin: 0 5px;
+}
+.card div div{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+h3{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5vh;
+    line-height: 3vh;
+    color: #FFFFFF;
+}
+.card div div p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1vh;
+    line-height: 2vh;
+    color: #828282;
+}
+h2{
+    width: 50%;
+    font-family: Lora;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5vh;
+    line-height: 3vh;
+    color: #FFFFFF;
+}
+#interior{
+    width: 45vw;    
+}
+#card{
+    border-radius: 50%;
+    width: 65px;
+}
+.author{
+    margin-top: 5vh;
+    width: 100vw;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2vh;
+    line-height: 17px;
+    text-align: center;
+    color: #BDBDBD;
+}
+
+@media(max-width: 1024px){
+    .nav-menu{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 85vh;
+    }
+    .nav-menu a{
+        margin: 35px;
+    }
+    .icon{
+        display: block;        
+    }
+    .card{
+        width: 70%;
+        left: 10%;
+        top: 85%;
+    }
+    @media(max-width: 600px){
+        nav, .container{
+            padding: 25px;
+        }
+        .container{
+            flex-direction: column;
+        }
+        .description, .photo, #interior{
+            width: 100%;
+        }
+        
+        #card{
+            width: 10vw;
+        }
+        .author{
+            margin-top: 200px;
+            padding-bottom: 15px;
+        }
+    }
+}
